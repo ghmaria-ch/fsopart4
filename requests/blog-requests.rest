@@ -1,0 +1,37 @@
+# Get all blogs
+GET http://localhost:3001/api/blogs
+
+###
+# Get a specific blog
+GET http://localhost:3001/api/blogs/67bcb53b768eb0b5e677ccd7
+
+###
+# Create a new blog
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhc2hhIiwiaWQiOiI2N2M2MDhkZDEwMDIzZTI5ZDVmYzYyOTIiLCJpYXQiOjE3NDEwNzUzMTd9.wn4hAx7BwEk86DDRXkOsoCWovvLqZGmGDNNEC2I6R-g
+
+{
+    "title": "RESTful API Design",
+    "author": "Rasha Lee",
+    "url": "http://example.com/restful-api",
+    "likes": 12
+}
+
+###
+# Update a blog
+PUT http://localhost:3001/api/blogs/67bcb644768eb0b5e677ccee
+Content-Type: application/json
+
+{
+    "title": "Pravasi",
+    "author": "Author Name",
+    "url": "http://example.com/new-blog",
+    "likes": 0,
+    "userId": "67c5eb9651babaa1ea0d4721"
+}
+
+###
+# Delete a blog
+DELETE http://localhost:3001/api/blogs/67c5ebf351babaa1ea0d4725
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhc2hhIiwiaWQiOiI2N2M2MDhkZDEwMDIzZTI5ZDVmYzYyOTIiLCJpYXQiOjE3NDEwNzUzMTd9.wn4hAx7BwEk86DDRXkOsoCWovvLqZGmGDNNEC2I6R-g
